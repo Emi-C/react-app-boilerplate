@@ -33,8 +33,9 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
-    port: 3000,
-    publicPath: 'http://localhost:3000/dist',
+    port: 8081,
+    publicPath: 'http://localhost:8081/dist',
+    open: true,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };

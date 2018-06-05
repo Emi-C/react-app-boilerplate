@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1 onClick={this.toggler} onKeyPress={this.toggler}>
-          {`Hello, ${this.state.toggle ? 'World' : 'Moon'}!`}
+          {`${this.props.salutation}, ${this.state.toggle ? 'World' : 'Moon'}!`}
         </h1>
       </div>
     );
