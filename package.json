@@ -24,7 +24,9 @@
   "homepage": "https://github.com/Emi-C/rtm#readme",
   "dependencies": {
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -43,10 +45,12 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "husky": "^0.14.3",
+    "husky": "^1.0.0-rc.8",
     "jest": "^22.4.3",
     "node-sass": "^4.9.0",
+    "prop-types": "^15.6.1",
     "react-test-renderer": "^16.4.0",
+    "redux-devtools": "^3.4.1",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.10.2",

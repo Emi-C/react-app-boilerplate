@@ -1,24 +1,6 @@
 import React from 'react';
+import Home from './Home';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { toggle: true };
-  }
-
-  toggler = () => {
-    this.setState({ toggle: !this.state.toggle });
-  };
-
-  render() {
-    return (
-      <div className="App">
-        <h1 onClick={this.toggler} onKeyPress={this.toggler}>
-          {`${this.props.salutation}, ${this.state.toggle ? 'World' : 'Moon'}!`}
-        </h1>
-      </div>
-    );
-  }
-}
+const App = () => <Home salutation="Hello" />;
 
 export default App;
