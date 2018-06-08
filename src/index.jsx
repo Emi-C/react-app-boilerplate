@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import store from 'redux/store';
+import 'theme/main.scss';
 import App from './App';
-import './theme/main.scss';
 
 ReactDOM.render(
   <Provider store={store}>

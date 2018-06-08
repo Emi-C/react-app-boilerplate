@@ -14,5 +14,12 @@
         "arrow-parens":0,
         "comma-dangle":0,
         "import/no-extraneous-dependencies":0
+      },
+      "settings": {
+        "import/resolver": {
+          "babel-module":{
+            "extensions": [".js", ".jsx"]
+            }
+        }
       }
   }

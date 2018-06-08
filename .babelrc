@@ -4,6 +4,14 @@
     ],
     "plugins": [
       "transform-class-properties",
-      "transform-object-rest-spread"
+      "transform-object-rest-spread",
+      ["module-resolver", {
+        "root": ["./src"],
+        "alias":{
+          "Home":"./src/Home",
+          "redux":"./src/redux",
+          "theme":"./src/theme"
+        }
+      }]
     ]
   }

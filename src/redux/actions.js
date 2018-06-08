@@ -1,4 +1,4 @@
-import homeActions from '../Home/redux/actions';
+import homeActions from 'Home/redux/actions';
 import createActions from './actionsUtils';
 
 const actions = {

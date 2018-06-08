@@ -1,4 +1,4 @@
-import actions from '../../redux/actions';
+import actions from 'redux/actions';
 
 const homeActions = actions.HOME;
 
@@ -8,9 +8,9 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case homeActions.BOOTSTRAP_SUCCESS.type:
+    case homeActions.BOOTSTRAP_SUCCESS.type: //success of behaviour saga
       return { ...state, counter: 0 };
-    case homeActions.INCREMENT_REQUEST_SUCCESS.type: //'INCREMENT_SUCCESS'
+    case homeActions.INCREMENT_REQUEST_SUCCESS.type: //success of common sagas
       return { ...state, counter: action.payload };
     case homeActions.DECREMENT_REQUEST_SUCCESS.type:
       return { ...state, counter: action.payload };
