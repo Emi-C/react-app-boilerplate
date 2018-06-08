@@ -1,6 +1,6 @@
 //connection
 import { connect } from 'react-redux';
-import actions from 'redux/actions';
+import actions from 'reduxUtils/actions';
 import Home from './template';
 
 const homeActions = actions.HOME;
