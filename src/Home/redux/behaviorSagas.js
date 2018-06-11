@@ -1,10 +1,11 @@
-import { put, takeEvery } from 'redux-saga/effects';
+import { call, put, select, takeEvery } from 'redux-saga/effects';
 import actions from 'reduxUtils/actions';
 import { incrementRequest, decrementRequest } from './functionalSagas';
 
 function* increment() {
   try {
-    yield put(incrementRequest);
+    const counter = yield select((state) => state.home.counter);
+    yield call(incrementRequest, counter + 1);
   } catch (err) {
     console.log(err);
   }
@@ -12,7 +13,12 @@ function* increment() {
 
 function* decrement() {
   try {
-    yield put(decrementRequest);
+    const counter = yield select((state) => state.home.counter);
+    if (counter < 1) {
+      yield put({ type: 'NO_DECREMENT' });
+    } else {
+      yield call(decrementRequest, counter - 1);
+    }
   } catch (err) {
     console.log(err);
   }

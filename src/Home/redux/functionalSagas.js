@@ -2,20 +2,20 @@ import { put } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
 import actions from 'reduxUtils/actions';
 
-export function* increment() {
+export function* incrementRequest(counter) {
   try {
     yield delay(500);
-    yield put(actions.HOME.INCREMENT_SUCCESS.create());
+    yield put(actions.HOME.INCREMENT_REQUEST_SUCCESS.create(counter));
   } catch (err) {
-    yield put(actions.HOME.INCREMENT_ERROR.create(err));
+    yield put(actions.HOME.INCREMENT_REQUEST_ERROR.create(err));
   }
 }
 
-export function* decrement() {
+export function* decrementRequest(counter) {
   try {
     yield delay(500);
-    yield put(actions.HOME.DECREMENT_SUCCESS.create());
+    yield put(actions.HOME.DECREMENT_REQUEST_SUCCESS.create(counter));
   } catch (err) {
-    yield put(actions.HOME.DECREMENT_ERROR.create(err));
+    yield put(actions.HOME.DECREMENT_REQUEST_ERROR.create(err));
   }
 }
