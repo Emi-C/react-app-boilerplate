@@ -39,6 +39,7 @@ module.exports = {
     port: 8080,
     publicPath: 'http://localhost:8080/dist',
     open: true,
+    historyApiFallback: true,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()], //HMR, on save reloads view
 };

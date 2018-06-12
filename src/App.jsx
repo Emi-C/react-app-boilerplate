@@ -1,6 +1,12 @@
 import React from 'react';
-import Home from 'Home';
+import Navigator from 'router/Navigator';
+import Router from 'router';
 
-const App = () => <Home salutation="Hello" />;
+const App = () => (
+  <React.Fragment>
+    <Navigator />
+    <Router />
+  </React.Fragment>
+);
 
 export default App;

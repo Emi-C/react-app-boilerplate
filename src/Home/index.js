@@ -12,6 +12,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const mapStateToProps = (state) => ({
   counter: state.home.counter,
+  salutation: 'Hello',
 });
 
 export default connect(
