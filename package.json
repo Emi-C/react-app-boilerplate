@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://Emi-C:Emiemi90@github.com/Emi-C/rtm.git"
+    "url": "git+https://Emi-C:Emiemi90@github.com/Emi-C/react-app-boilerplate.git"
   },
   "author": "Emi-C",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Emi-C/rtm/issues"
+    "url": "https://github.com/Emi-C/react-app-boilerplate/issues"
   },
-  "homepage": "https://github.com/Emi-C/rtm#readme",
+  "homepage": "https://github.com/Emi-C/react-app-boilerplate#readme",
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",

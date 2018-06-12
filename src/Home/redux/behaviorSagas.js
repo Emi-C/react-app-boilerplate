@@ -7,7 +7,7 @@ function* increment() {
     const counter = yield select((state) => state.home.counter);
     yield call(incrementRequest, counter + 1);
   } catch (err) {
-    console.log(err);
+    throw err;
   }
 }
 
@@ -20,7 +20,7 @@ function* decrement() {
       yield call(decrementRequest, counter - 1);
     }
   } catch (err) {
-    console.log(err);
+    throw err;
   }
 }
 
