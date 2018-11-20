@@ -13,7 +13,7 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel-loader', //transpiles js and jsx files
         options: {
-          presets: ['env', 'react'],
+          presets: ['@babel/env', '@babel/react'],
           plugins: ['transform-class-properties'], //used to write functions without explicit binding inside classes
         },
       },

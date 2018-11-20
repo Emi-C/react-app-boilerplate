@@ -1,18 +1,18 @@
 {
-    "presets": [
-      "env","react"
-    ],
-    "plugins": [
-      "transform-class-properties",
-      "transform-object-rest-spread",
-      "transform-runtime",
-      ["module-resolver", {
-        "root": ["./src"],
-        "alias":{
-          "Home":"./src/Home",
-          "reduxUtils":"./src/reduxUtils",
-          "theme":"./src/theme"
-        }
-      }]
-    ]
-  }
+  "presets": [
+    "@babel/env","@babel/react"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "@babel/plugin-syntax-object-rest-spread",
+    "@babel/plugin-transform-runtime",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias":{
+        "Home":"./src/Home",
+        "reduxUtils":"./src/reduxUtils",
+        "theme":"./src/theme"
+      }
+    }]
+  ]
+}
