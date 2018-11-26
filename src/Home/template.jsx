@@ -1,34 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Title, Counter } from './styles';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { toggle: true };
+    this.state = { toggle: true, color: '#000' };
   }
 
   componentDidMount() {
-    this.props.bootstrap();
+    const { bootstrap } = this.props;
+    this.randomicColor();
+    bootstrap();
   }
 
   toggler = () => {
-    this.setState({ toggle: !this.state.toggle });
+    const { toggle } = this.state;
+    this.setState({ toggle: !toggle });
+  };
+
+  randomicColor = () => {
+    setInterval(() => {
+      const color = '#000000'.replace(/0/g, () => Math.floor(Math.random() * 16).toString(16));
+      this.setState({ color });
+    }, 500);
   };
 
   render() {
+    const { salutation, increment, decrement, counter } = this.props;
+    const { toggle, color } = this.state;
     return (
       <div className="Home">
-        <h1 onClick={this.toggler} onKeyPress={this.toggler}>
-          {`${this.props.salutation}, ${this.state.toggle ? 'World' : 'Moon'}!`}
-        </h1>
-        <h2 onClick={this.props.increment} onKeyPress={this.props.increment}>
+        <Title onClick={this.toggler} onKeyPress={this.toggler}>
+          {`${salutation}, ${toggle ? 'World' : 'Moon'}!`}
+        </Title>
+        <h2 onClick={increment} onKeyPress={increment}>
           Increment
         </h2>
-        <h2 onClick={this.props.decrement} onKeyPress={this.props.decrement}>
+        <h2 onClick={decrement} onKeyPress={decrement}>
           Decrement
         </h2>
 
-        <h3>{this.props.counter}</h3>
+        <Counter color={color}>{counter}</Counter>
       </div>
     );
   }

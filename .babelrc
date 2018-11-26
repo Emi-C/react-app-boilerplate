@@ -10,8 +10,7 @@
       "root": ["./src"],
       "alias":{
         "Home":"./src/Home",
-        "reduxUtils":"./src/reduxUtils",
-        "theme":"./src/theme"
+        "reduxUtils":"./src/reduxUtils"
       }
     }]
   ]

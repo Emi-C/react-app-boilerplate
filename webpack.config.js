@@ -17,6 +17,7 @@ module.exports = {
           plugins: ['transform-class-properties'], //used to write functions without explicit binding inside classes
         },
       },
+      /* CSS? install css-loader node-sass sass-loader style-loader
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
@@ -25,6 +26,7 @@ module.exports = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      */
     ],
   },
   resolve: {
